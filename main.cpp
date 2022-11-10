@@ -19,7 +19,9 @@ int main(){
     string command;
     printf("Enter Command: \n");
     char *command_msg = "COMMANDS:\n1.add\n2.sub\n3.mul\n4.div\n";
+    char *example_cmd = "EXAMPLE:add 1 1\nANSWER:2";
     printf("%s\n", command_msg);
+    printf("%s\n", example_cmd);
     getline(cin>>ws, command);
     
     while(command!="quit"){
