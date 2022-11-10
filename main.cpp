@@ -18,19 +18,11 @@ int main(){
     int a, b;
     string command;
     printf("Enter Command: \n");
-    char *command_msg = "COMMANDS:\n1.add\n2.sub\n3.mul\n4.div";
+    char *command_msg = "COMMANDS:\n1.add\n2.sub\n3.mul\n4.div\n";
+    printf("%s\n", command_msg);
     getline(cin>>ws, command);
     
-    // while(command!="quit"){
-
-    // }
-    
-    int numArray[2];
-    int numCount = 0;
-    
-
-    printf("\n5 + 5 = %i\n", add(5,5));
-    
+    while(command!="quit"){
     string wordCommand = getWordCommand(command);
     std::cout << "Command: " << wordCommand << std::endl;
     printf("newline\n");
@@ -38,21 +30,25 @@ int main(){
     vector<string> splits = split(command, ' ');   
    
 
-    std::cout << "1st element (0)" << splits[0] << "2nd elemnt(1):" << splits[1]<< std::endl;
-
     a = stoi(splits[1]);
     b = stoi(splits[2]);
 
     if(splits[0] == "add"){
-        printf("%d", add(a,b));
+        printf("\nANSWER: %d\n", add(a,b));
     }else if(splits[0] == "sub"){
-        printf("%d", sub(a, b));
+        printf("\nANSWER: %d\n", sub(a, b));
     }else if(splits[0] == "mul"){
-        printf("%d", mul(a,b));
+        printf("\nANSWER: %d\n", mul(a,b));
     }else if(splits[0] == "div"){
-        printf("%d", divv(a,b));
+        printf("\nANSWER: %d\n", divv(a,b));
     }
-    
+
+    printf("Enter Command: \n");
+    char *command_msg = "COMMANDS:\n1.add\n2.sub\n3.mul\n4.div";
+    printf("%s\n", command_msg);
+    getline(cin>>ws, command);
+    }    
+    printf("Have a great day!");
 
     return 0;
 }
